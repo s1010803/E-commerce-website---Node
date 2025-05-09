@@ -6,7 +6,7 @@ exports.getHot = async (req, res) => {
       SELECT h.h_sort AS hotSort, p.img_file AS pImg
       FROM hot h
       JOIN product_img p on h.p_id = p.p_id
-      WHERE p.sort = 1
+      WHERE  p.sort =1
       ORDER BY h.h_sort ASC
     `);
 
