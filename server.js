@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const port = 3000
 const cors = require('cors');
-require('dotenv').config();
 const classRoutes = require('./routes/classRoutes');
 const caroRoute = require('./routes/caro');
 const hotRoute = require('./routes/hotRoute');
