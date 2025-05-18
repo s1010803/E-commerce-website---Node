@@ -29,7 +29,7 @@ exports.getProducts = async (req, res) => {
 
     // 取得該頁資料
     const [rows] = await db.execute(`
-      SELECT p.p_name AS pName, p.p_intro AS pIntro, p.p_price AS pPrice, pi.img_file AS pImg, pi.img_id AS id
+      SELECT p.p_name AS pName, p.p_intro AS pIntro, p.p_price AS pPrice, pi.img_file AS pImg, pi.img_id AS id, p.p_id AS pid, pi.sort AS sort
       FROM product p
       JOIN product_img pi ON p.p_id = pi.p_id
       WHERE p.p_open = 1 AND pi.sort = 1
