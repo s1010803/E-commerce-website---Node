@@ -9,9 +9,9 @@ exports.getProducts = async (req, res) => {
 
     let condition = '';
     if (category === 'clothes') {
-      condition = 'AND pi.p_id <= 13';
+      condition = 'AND classid IN (3, 4, 5, 6)';
     } else if (category === 'accessories') {
-      condition = 'AND pi.p_id > 13';
+      condition = 'AND classid IN (7, 8, 9, 10)';
     } else {
       condition = ''; 
     }
